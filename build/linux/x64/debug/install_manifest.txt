@@ -1,0 +1,10 @@
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/wesafeapp
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle/data/flutter_assets/version.json
