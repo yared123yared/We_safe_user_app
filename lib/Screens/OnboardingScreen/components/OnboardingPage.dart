@@ -7,13 +7,16 @@ class OnboardingPage extends StatelessWidget {
   final String urlImage;
   final String title;
   final String subTitle;
+  final String fontFamily;
 
   const OnboardingPage(
       {Key? key,
       required this.color,
       required this.urlImage,
       required this.title,
-      required this.subTitle})
+      required this.subTitle,
+      required this.fontFamily
+      })
       : super(key: key);
 
   @override
@@ -34,6 +37,7 @@ class OnboardingPage extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
+                fontFamily: "Roboto",
                 color: kPrimaryColor,
                 fontSize: 32,
                 fontWeight: FontWeight.bold),
@@ -43,7 +47,9 @@ class OnboardingPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               subTitle,
-              style: const TextStyle(color: Colors.black54),
+              style: const TextStyle(
+                color: Colors.black54,
+                fontFamily: "Roboto",),
             ),
           )
         ],

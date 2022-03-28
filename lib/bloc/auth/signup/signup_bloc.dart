@@ -59,7 +59,7 @@ class SignupBloc extends Bloc<SignupEvent, SignupState> {
       SignupEvent event, Emitter<SignupState> emit) async {
     emit(state.copyWith(formStatus: FormSubmitting()));
     try {
-      // await authRepo.signUp();
+      await authRepo.signUp();
       await Future.delayed(const Duration(seconds: 4), () {});
       emit(state.copyWith(formStatus: SubmissionSuccess()));
     } catch (e) {

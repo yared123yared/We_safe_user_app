@@ -43,6 +43,7 @@ dependencies:
   fluttertoast: ^8.0.9
   bloc: ^8.0.3
   image_picker: ^0.8.4+11
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,26 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto/Roboto-BlackItalic.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-BoldItalic.ttf
+        - asset: assets/fonts/Roboto/Roboto-Italic.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-LightItalic.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto/Roboto-MediumItalic.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+        - asset: assets/fonts/Roboto/Roboto-ThinItalic.ttf
+          style: italic
+    - family: Princess_Sofia
+      fonts:
+        - asset: assets/fonts/Princess_Sofia/PrincessSofia-Regular.ttf
+          style: normal
   # fonts:
   #   - family: Schyler
   #     fonts:

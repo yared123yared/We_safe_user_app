@@ -14,8 +14,8 @@ class UserRepository {
     return await dataProvider.logIn(email, password);
   }
 
-  Future<LoginResponse> signUp(LoginResponse loginResponse) async {
+  Future<LoginResponse> signUp() async {
     print("This is the getUser(email) method in repo");
-    return await dataProvider.signUp(loginResponse);
+    return await dataProvider.signUp();
   }
 }

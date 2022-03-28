@@ -38,10 +38,11 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Auth',
+          title: 'We Safe',
           theme: ThemeData(
             primaryColor: kPrimaryColor,
             scaffoldBackgroundColor: Colors.white,
+            fontFamily: 'roboto',
           ),
           home: MySplashScreen(child: OnBoardingScreen())),
     );

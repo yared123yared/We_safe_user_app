@@ -33,24 +33,10 @@ class UserDataProvider {
           //   "Role": "USER"
           // }),
           body: jsonEncode({
-            "identificationCard": "string",
-            "role": {"roleName": "User"},
-            "person": {
-              "firstName": "Ashenafi",
-              "lastName": "Chufamo",
-              "password": "ashuashu",
-              "phone": "0944060864",
-              "picture": "ashu.jpg",
-              "sex": "male",
-              "address": {
-                "city": "Addis",
-                "subcity": "Nsl",
-                "kebele": "01",
-                "latitude": 100,
-                "longtiude": 80
-              },
-              "role": {"roleName": "User"}
-            }
+
+              "phone": "0920490686",
+              "password": "yared123"
+
           }));
 
       print("done");
@@ -59,7 +45,7 @@ class UserDataProvider {
         if (kDebugMode) {
           print("================");
           print("Hello this works");
-          print("qqqqqqqqqqqqqqqqq");
+          print(response.body);
           print("Hello this works");
           print("================");
         }
@@ -80,7 +66,7 @@ class UserDataProvider {
     }
   }
 
-  Future<LoginResponse> signUp(LoginResponse loginResponse) async {
+  Future<LoginResponse> signUp() async {
     try {
       final response = await httpClient.post(
           Uri.http('wesafeservice.herokuapp.com', '/api/users'),
@@ -88,23 +74,29 @@ class UserDataProvider {
             'Content-Type': 'application/json; charset=UTF-8',
           },
           body: jsonEncode({
-            "identificationCard": "string",
-            "role": {"roleName": "User"},
-            "person": {
-              "firstName": "Ashenafi",
-              "lastName": "Chufamo",
-              "password": "ashuashu",
-              "phone": "0944060864",
-              "picture": "ashu.jpg",
-              "sex": "male",
-              "address": {
-                "city": "Addis",
-                "subcity": "Nsl",
-                "kebele": "01",
-                "latitude": 100,
-                "longtiude": 80
+            {
+              "identificationCard": "string",
+              "role": {
+                "roleName": "User"
               },
-              "role": {"roleName": "User"}
+              "person": {
+                "firstName": "Ashenafi",
+                "lastName": "Chufamo",
+                "password": "ashuashu",
+                "phone": "0944060864",
+                "picture": "ashu.jpg",
+                "sex": "male",
+                "address": {
+                  "city": "Addis",
+                  "subcity": "Nsl",
+                  "kebele": "01",
+                  "latitude": 100,
+                  "longtiude": 80
+                },
+                "role": {
+                  "roleName": "User"
+                }
+              }
             }
           }));
 
