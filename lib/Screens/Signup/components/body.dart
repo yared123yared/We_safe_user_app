@@ -43,7 +43,7 @@ class _BodyState extends State<Body> {
               listener: (context, state) {
                 final formStatus = state.formStatus;
                 if (formStatus is SubmissionFailed) {
-                  _showSnackBar(context, formStatus.exception.toString());
+                  _showSnackBar(context, formStatus.message.toString());
                 }
                 // if(formStatus is SubmissionSuccess){
                 //   _showSnackBar(context, "Successfully logged-in");

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:wesafeapp/Screens/Home/home_page.dart';
 import 'package:wesafeapp/Screens/Signup/signup_screen.dart';
 import 'package:wesafeapp/bloc/auth/form_submition_status.dart';
 import 'package:wesafeapp/bloc/auth/login/login_bloc.dart';
@@ -26,6 +27,7 @@ class _BodyState extends State<Body> {
   bool isObscrued = true;
   final _myemailController = TextEditingController();
   final _myPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -44,98 +46,108 @@ class _BodyState extends State<Body> {
               height: size.height * 0.35,
             ),
             SizedBox(height: size.height * 0.03),
-            BlocConsumer<LoginBloc, LoginState>(
-  listener: (_, state) {
-    final formStatus = state.formStatus;
-    if(formStatus is SubmissionFailed){
-      _showSnackBar(context, formStatus.exception.toString());
-    }
-    if (formStatus is SubmissionSuccess) {
-                _showSnackBar(context, "Successfully logged-in");
+            BlocConsumer<LoginBloc, LoginState>(listener: (_, state) {
+              final formStatus = state.formStatus;
+              if (formStatus is SubmissionFailed) {
+                _showSnackBar(context, formStatus.message.toString());
               }
-            },
-    builder:(_,state){ return Form(
-              key: _formKey,
-              child: Column(
-                children: [
-                  BlocBuilder<LoginBloc, LoginState>(
-  builder: (context, state) {
-    return RoundedInputField(
-                    controller: _myemailController,
-                    hintText: "Email",
-                    onChanged: (value) {
-                      context.read<LoginBloc>().add(
-                          LoginUsernameChanged(username: value)
-                      );
-                    }, onSaved: (String? newValue) {  },
-                  );
-  },
-),
-                  BlocBuilder<LoginBloc, LoginState>(
-  builder: (context, state) {
-    return RoundedPasswordField(
-                    controller: _myPasswordController,
-                    onChanged: (value) {
-                      context.read<LoginBloc>().add(
-                          LoginPasswordChanged(password: value)
-                      );
+              if (formStatus is SubmissionSuccess) {
+                _showSnackBar(context, "Successfully logged-in");
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return HomePage();
                     },
-                    // onSaved: (){},
-                    isObscured: isObscrued,
-                    iconButton: isObscrued?
-                    IconButton(
-                        onPressed: (){setState(() {
-                          isObscrued = !isObscrued;
-                        });},
-                        icon: const Icon(Icons.visibility)):
-                    IconButton(
-                        onPressed: (){setState(() {
-                          isObscrued = !isObscrued;
-                        });},
-                        icon: const Icon(Icons.visibility_off)), onSaved: (String? newValue) {  },
-                  );
-  },
-),
-                  BlocBuilder<LoginBloc, LoginState>(
-  builder: (context, state) {
+                  ),
+                );
+              }
+            }, builder: (_, state) {
+              return Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    BlocBuilder<LoginBloc, LoginState>(
+                      builder: (context, state) {
+                        return RoundedInputField(
+                          controller: _myemailController,
+                          hintText: "Phone",
+                          onChanged: (value) {
+                            context
+                                .read<LoginBloc>()
+                                .add(LoginUsernameChanged(username: value));
+                          },
+                          onSaved: (String? newValue) {
+                            context
+                                .read<LoginBloc>()
+                                .add(LoginUsernameChanged(username: newValue!));
+                          },
+                        );
+                      },
+                    ),
+                    BlocBuilder<LoginBloc, LoginState>(
+                      builder: (context, state) {
+                        return RoundedPasswordField(
+                          controller: _myPasswordController,
+                          onChanged: (value) {
+                            context
+                                .read<LoginBloc>()
+                                .add(LoginPasswordChanged(password: value));
+                          },
+                          isObscured: isObscrued,
+                          iconButton: isObscrued
+                              ? IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      isObscrued = !isObscrued;
+                                    });
+                                  },
+                                  icon: const Icon(Icons.visibility))
+                              : IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      isObscrued = !isObscrued;
+                                    });
+                                  },
+                                  icon: const Icon(Icons.visibility_off)),
+                          onSaved: (String? newValue) {},
+                        );
+                      },
+                    ),
+                    BlocBuilder<LoginBloc, LoginState>(
+                      builder: (context, state) {
+                        return state.formStatus is FormSubmitting
+                            ? const CircularProgressIndicator(
+                                color: Colors.black54,
+                              )
+                            : RoundedButton(
+                                text: "LOGIN",
+                                press: () {
+                                  _formKey.currentState?.save();
 
-    return state.formStatus is FormSubmitting?
-        CircularProgressIndicator(
-          color: Colors.black54,
-        )
-    :RoundedButton(
-                    text: "LOGIN",
-                    press: () {
-                      _formKey.currentState?.save();
+                                  if (_formKey.currentState!.validate()) {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return HomePage();
+                                        },
+                                      ),
+                                    );
+                                    // context
+                                    //     .read<LoginBloc>()
+                                    //     .add(LoginSubmitted());
 
-                      if (_formKey.currentState!.validate()) {
-
-                        context.read<LoginBloc>().add(LoginSubmitted());
-
-                        // const UserEvent event = UserLogin("_myemailController.text", "_myPasswordController.text");
-                        //
-                        // BlocProvider.of<UserBloc>(context).add(event);
-                        print("Pressed");
-                        // if (widget.state is UserOperationFailure) {
-                        //   Fluttertoast.showToast(
-                        //       msg: "This is Center Short Toast",
-                        //       toastLength: Toast.LENGTH_SHORT,
-                        //       gravity: ToastGravity.CENTER,
-                        //       timeInSecForIosWeb: 1,
-                        //       backgroundColor: Colors.red,
-                        //       textColor: Colors.white,
-                        //       fontSize: 16.0
-                        //   );
-                        // }
-                      }
-                    },
-                  );
-  },
-),
-                ],
-              ),
-            );}
-),
+                                    print("Pressed");
+                                  }
+                                },
+                              );
+                      },
+                    ),
+                  ],
+                ),
+              );
+            }),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
               press: () {
@@ -153,10 +165,9 @@ class _BodyState extends State<Body> {
         ),
       ),
     );
-
-
   }
-  void _showSnackBar(BuildContext,String message){
+
+  void _showSnackBar(BuildContext, String message) {
     final snackBar = SnackBar(content: Text(message));
     Scaffold.of(context).showSnackBar(snackBar);
   }

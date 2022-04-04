@@ -35,6 +35,14 @@ class RoundedInputField extends StatelessWidget {
             if(!RegExp (r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value)) {
               return "Incorrect Email Address";
             }}
+          if (hintText=="Phone"){
+            if(!RegExp (r"^[0-9]+").hasMatch(value)) {
+              return "Incorrect Phone Number";
+            }
+            if (value.length < 9) {
+              return 'Please provide you complete Phone number';
+            }
+          }
           return null;
         },
         decoration: InputDecoration(

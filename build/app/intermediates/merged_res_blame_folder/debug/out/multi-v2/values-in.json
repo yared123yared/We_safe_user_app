@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml",
+            "outputFile": "/home/ashu/Documents/BitBucket/wesafeapp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-in/values-in.xml",
             "map": [
                 {
-                    "source": "/home/ashu/.gradle/caches/transforms-2/files-2.1/5f663b08eec19eef9a9d1af662d9025e/core-1.6.0/res/values-in/values-in.xml",
+                    "source": "/home/ashu/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/values-in/values-in.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

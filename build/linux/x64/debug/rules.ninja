@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__wesafeapp
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -S/home/ashu/FinalProject/CommunityUsers/wesafeapp/linux -B/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug
+  command = /usr/bin/cmake -S/home/ashu/Documents/BitBucket/wesafeapp/linux -B/home/ashu/Documents/BitBucket/wesafeapp/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 

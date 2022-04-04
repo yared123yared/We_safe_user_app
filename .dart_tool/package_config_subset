@@ -1,7 +1,7 @@
 wesafeapp
 2.15
-file:///home/ashu/FinalProject/CommunityUsers/wesafeapp/
-file:///home/ashu/FinalProject/CommunityUsers/wesafeapp/lib/
+file:///home/ashu/Documents/BitBucket/wesafeapp/
+file:///home/ashu/Documents/BitBucket/wesafeapp/lib/
 async
 2.12
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2/
@@ -110,6 +110,10 @@ matcher
 2.12
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11/
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11/lib/
+material_color_utilities
+2.13
+file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.3/
+file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/material_color_utilities-0.1.3/lib/
 meta
 2.12
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.7.0/
@@ -228,8 +232,8 @@ file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0/
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/term_glyph-1.2.0/lib/
 test_api
 2.12
-file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3/
-file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3/lib/
+file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/
+file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.8/lib/
 typed_data
 2.12
 file:///home/ashu/flutter/.pub-cache/hosted/pub.dartlang.org/typed_data-1.3.0/

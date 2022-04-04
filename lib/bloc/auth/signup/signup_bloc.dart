@@ -21,49 +21,49 @@ class SignupBloc extends Bloc<SignupEvent, SignupState> {
   }
 
   void _mapSignupFirstNameUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(firstName: state.firstName));
+      SignupFirstNameChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(firstName: event.firstName));
   }
 
   void _mapSignupULastNameUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(lastName: state.lastname));
+      SignupLastNameChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(lastName: event.lastName));
   }
 
   void _mapSignupCityUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(city: state.city));
+      SignupCityChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(city: event.city));
   }
 
   void _mapSignupSubcityUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(subCity: state.subcity));
+      SignupSubityChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(subCity: event.subcity));
   }
 
   void _mapSignupWoredaUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(woreda: state.woreda));
+      SignupWoredaChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(woreda: event.woreda));
   }
 
   void _mapSignupPhoneUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(phone: state.phone));
+      SignupPhoneChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(phone: event.phone));
   }
 
   void _mapLoginPasswordUpdatedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) {
-    emit(state.copyWith(password: state.password));
+      SignupPasswordChanged event, Emitter<SignupState> emit) {
+    emit(state.copyWith(password: event.password));
   }
 
   void _mapSignupSubmittedEventToState(
-      SignupEvent event, Emitter<SignupState> emit) async {
+      SignupSubmitted event, Emitter<SignupState> emit) async {
     emit(state.copyWith(formStatus: FormSubmitting()));
     try {
       await authRepo.signUp();
       await Future.delayed(const Duration(seconds: 4), () {});
       emit(state.copyWith(formStatus: SubmissionSuccess()));
     } catch (e) {
-      emit(state.copyWith(formStatus: SubmissionFailed(e)));
+      emit(state.copyWith(formStatus: SubmissionFailed(e.toString())));
     }
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wesafeapp/Data_provider/User_data.dart';
 import 'package:wesafeapp/Repository/repository.dart';
+import 'package:wesafeapp/Screens/Home/home_page.dart';
 import 'package:wesafeapp/bloc/auth/login/login_bloc.dart';
 import 'package:wesafeapp/bloc/auth/signup/signup_bloc.dart';
 import 'package:wesafeapp/utils/SplashScreen.dart';
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
             fontFamily: 'roboto',
           ),
           home: MySplashScreen(child: OnBoardingScreen())),
+          // home: MySplashScreen(child: HomePage())),
     );
   }
 }

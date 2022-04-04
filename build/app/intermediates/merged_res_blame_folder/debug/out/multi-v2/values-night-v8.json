@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/ashu/Documents/BitBucket/wesafeapp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/ashu/FinalProject/CommunityUsers/wesafeapp/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/ashu/Documents/BitBucket/wesafeapp/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -1,8 +1,8 @@
-# Install script for directory: /home/ashu/FinalProject/CommunityUsers/wesafeapp/linux/flutter
+# Install script for directory: /home/ashu/Documents/BitBucket/wesafeapp/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ashu/FinalProject/CommunityUsers/wesafeapp/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/ashu/Documents/BitBucket/wesafeapp/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

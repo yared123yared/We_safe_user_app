@@ -21,6 +21,7 @@ class UserDataProvider {
     try {
       final response = await httpClient.post(
           Uri.http('wesafeservice.herokuapp.com', '/api/persons/authenticate'),
+          // Uri.http('broker-service-api.herokuapp.com', '/api/persons/authenticate'),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },
@@ -33,10 +34,8 @@ class UserDataProvider {
           //   "Role": "USER"
           // }),
           body: jsonEncode({
-
-              "phone": "0920490686",
-              "password": "yared123"
-
+              "phone": email,
+              "password": password
           }));
 
       print("done");
@@ -59,7 +58,7 @@ class UserDataProvider {
       } else {
         print(response.statusCode);
         print(response.body);
-        throw Exception('Failed to login User.');
+        throw Exception(response.body);
       }
     } on Exception catch (e) {
       rethrow;
@@ -70,6 +69,7 @@ class UserDataProvider {
     try {
       final response = await httpClient.post(
           Uri.http('wesafeservice.herokuapp.com', '/api/users'),
+          // Uri.http('broker-service-api.herokuapp.com', '/api/users'),
           headers: <String, String>{
             'Content-Type': 'application/json; charset=UTF-8',
           },

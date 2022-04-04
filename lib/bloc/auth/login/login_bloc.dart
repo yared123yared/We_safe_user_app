@@ -14,23 +14,23 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   void _mapLoginUsernameUpdatedEventToState(
-      LoginEvent event, Emitter<LoginState> emit) {
-    emit(state.copyWith(username: state.username));
+      LoginUsernameChanged event, Emitter<LoginState> emit) {
+    emit(state.copyWith(username: event.username));
   }
 
   void _mapLoginPasswordUpdatedEventToState(
-      LoginEvent event, Emitter<LoginState> emit) {
-    emit(state.copyWith(password: state.password));
+      LoginPasswordChanged event, Emitter<LoginState> emit) {
+    emit(state.copyWith(password: event.password));
   }
 
   void _mapLoginSubmittedEventToState(
-      LoginEvent event, Emitter<LoginState> emit) async {
+      LoginSubmitted event, Emitter<LoginState> emit) async {
     emit(state.copyWith(formStatus: FormSubmitting()));
     try {
       await authRepo.logIn(state.username, state.password);
       emit(state.copyWith(formStatus: SubmissionSuccess()));
     } catch (e) {
-      emit(state.copyWith(formStatus: SubmissionFailed(e)));
+      emit(state.copyWith(formStatus: SubmissionFailed(e.toString())));
     }
   }
 }
