@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/shared_preferences_android/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/shared_preferences_android/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/shared_preferences_android/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/shared_preferences_android/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout-v21/notification_action.xml"
+    }
+]

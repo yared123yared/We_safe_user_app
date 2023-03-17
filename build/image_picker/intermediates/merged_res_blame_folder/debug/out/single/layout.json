@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/custom_dialog.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/apple/Documents/Company/hadistech/WeSafe/wesafeapp/build/image_picker/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/apple/.gradle/caches/transforms-2/files-2.1/7d77d4ebbaf550305d01ed54778f79fb/core-1.6.0/res/layout/notification_action.xml"
+    }
+]
